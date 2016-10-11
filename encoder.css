@@ -1,3 +1,9 @@
+body {
+  background-image: url(https://helpx.adobe.com/content/dam/help/en/premiere/how-to/pr-generic-04_1408x792.jpg);
+background-size: 100%;
+}
+
+
 #textArea {
   width: 700px;
   height: 150px;
