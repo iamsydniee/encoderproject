@@ -27,6 +27,7 @@ var letters = {
    88: "x",
    89: "y",
    90: "z",
+   91: "a",
  }
  // which button checked//
 
@@ -51,11 +52,18 @@ $("input[type='radio']").click(function(){
   $(this).prop('checked', true);
 })
 
-//  Decoding //
-var messageArray = messageToDecode.split("")
 
-$("#translationArea").keydown(function(e) {
 
-for (var i = 0; i < messageArray.length; i++) {
-  
+$("#translationInputText").keydown(function(e) {
+if( e.keyCode == 13)  {
+
+  var messageToDecode = $('#translationInputText').val();
+  var messageArray = messageToDecode.split("")
+
+  for( var i = 0; i < messageArray.length; i++) {
+
+      var translatedLetter = messageArray[i].charCodeAt(0)- 32 + 1;
+      $('#translationArea').append(letters[translatedLetter]);
+  }
 }
+});
