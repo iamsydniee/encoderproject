@@ -52,8 +52,6 @@ $("input[type='radio']").click(function(){
   $(this).prop('checked', true);
 })
 
-
-
 $("#translationInputText").keydown(function(e) {
 if( e.keyCode == 13)  {
 
